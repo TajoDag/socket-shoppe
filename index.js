@@ -8,10 +8,10 @@ const server = http.createServer(app);
 
 const CLIENT_PORT = process.env.CLIENT_PORT;
 const ADMIN_PORT = process.env.ADMIN_PORT;
-
+const CLIENT_PORT_2 = process.env.CLIENT_PORT_2;
 const io = new Server(server, {
   cors: {
-    origin: [CLIENT_PORT, ADMIN_PORT],
+    origin: [CLIENT_PORT, ADMIN_PORT, CLIENT_PORT_2],
     methods: ["GET", "POST"],
   },
 });
